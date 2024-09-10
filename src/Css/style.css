@@ -1,0 +1,206 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+
+## Colors
+
+### Primary
+
+- Lime: hsl(61, 70%, 52%)
+- Red: hsl(4, 69%, 50%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Slate 100: hsl(202, 86%, 94%)
+- Slate 300: hsl(203, 41%, 72%)
+- Slate 500: hsl(200, 26%, 54%)
+- Slate 700: hsl(200, 24%, 40%)
+- Slate 900: hsl(202, 55%, 16%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px 
+
+### Font
+
+- Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+- Weights: 500, 700 */
+
+:root {
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(201, 56%, 16%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  background: var(--Slate-100);
+  font-size: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+}
+.mortgage-container {
+  background: var(--White);
+  max-width: 100rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 15px;
+  color: var(--Slate-700);
+}
+.term-rate {
+  display: flex;
+  gap: 2rem;
+}
+.form-container {
+  padding: 3.5rem;
+}
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.form-header a {
+  color: var(--Slate-700);
+}
+.tag {
+  background-color: var(--Slate-100);
+  padding: 0.7rem 1.5rem;
+}
+.title {
+  font-size: 2.2rem;
+  color: var(--White);
+}
+.form-title {
+  color: var(--Slate-900);
+}
+.results-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.input-container {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--Slate-700);
+  width: fit-content;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.input-container--1 {
+  width: 100%;
+}
+input {
+  outline: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+.body-text,
+.label {
+  color: var(--Slate-700);
+}
+.mortgage-type {
+  padding: 0.5rem;
+  width: 1rem;
+}
+.mortgage-type-label {
+  color: var(--Slate-900);
+  font-weight: 700;
+}
+.mortgage-type {
+  margin-right: 1.5rem;
+}
+.radio-container {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.results-container {
+  padding: 3.5rem;
+  background: var(--Slate-900);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 70px;
+}
+.results-container--1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.results-description {
+  text-align: center;
+  color: var(--Slate-300);
+}
+button {
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--Slate-900);
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border-radius: 30rem;
+  background: var(--Lime);
+  font-family: inherit;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+.body-text--2 {
+  color: var(--Slate-300);
+}
+.card {
+  margin-top: 3.5rem;
+  border-top: 0.5rem solid var(--Lime);
+  border-radius: 4px;
+  background: #0b1c26;
+  padding: 2rem;
+}
+.monthly-repayment {
+  margin-bottom: 1rem;
+}
+.term-repayment {
+  margin-bottom: 1rem;
+}
+.repayment-result {
+  border-bottom: 1px solid var(--Slate-700);
+  padding-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  color: var(--Lime);
+}
+.total-result {
+  font-size: 2.2rem;
+  color: var(--White);
+}
