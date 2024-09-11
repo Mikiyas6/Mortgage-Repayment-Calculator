@@ -14,7 +14,7 @@ Thanks for Checking out My small Project Involving Javascript using MVC Architec
 ### Links
 
 - Solution URL: [Github-link](https://github.com/Mikiyas6/Mortgage-Repayment-Calculator)
-- Live Site URL: [Page-link](https://mike-mortgage-calculator.netlify.app/)
+- Live Site URL: [Page-link](https://mike-mortgage-repayment-calculator.netlify.app/)
 
 ### Built with
 
