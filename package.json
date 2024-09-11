@@ -1,0 +1,29 @@
+{
+  "name": "mortgage-repayment-calculator",
+  "version": "1.0.0",
+  "description": "A Mortgage Calculator",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "default": "index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikiyas6/Mortgage-Repayment-Calculator.git"
+  },
+  "author": "Mikiyas Teowodroes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikiyas6/Mortgage-Repayment-Calculator/issues"
+  },
+  "homepage": "https://github.com/Mikiyas6/Mortgage-Repayment-Calculator#readme",
+  "dependencies": {
+    "core-js": "^3.38.1",
+    "parcel": "^2.12.0",
+    "regenerator-runtime": "^0.14.1",
+    "transformer-js": "^0.0.9"
+  },
+  "devDependencies": {
+    "url": "^0.11.4"
+  }
+}

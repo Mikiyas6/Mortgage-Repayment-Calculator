@@ -88,12 +88,14 @@ body {
   justify-content: space-between;
   margin-bottom: 2.5rem;
 }
-.form-header a {
+a:link,
+a:visited {
   color: var(--Slate-700);
 }
 .tag {
   background-color: var(--Slate-100);
   padding: 0.7rem 1.5rem;
+  cursor: pointer;
 }
 .title {
   font-size: 2.2rem;
@@ -103,7 +105,7 @@ body {
   color: var(--Slate-900);
 }
 .results-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
 }
 .input-container {
@@ -115,6 +117,18 @@ body {
   margin-top: 1rem;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.4;
+}
+
+.input-container:focus-within .tag {
+  background: var(--Lime);
+}
+.input-container:focus-within,
+.input-container:hover {
+  border-color: var(--Lime);
+}
+.input-container:hover {
+  cursor: pointer;
 }
 .input-container--1 {
   width: 100%;
@@ -124,6 +138,16 @@ input {
   border: none;
   padding: 0.75rem 1rem;
   width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--Slate-900);
+  transition: all 0.4;
+}
+input:active,
+input:focus {
+  cursor: auto;
 }
 .body-text,
 .label {
@@ -136,15 +160,26 @@ input {
 .mortgage-type-label {
   color: var(--Slate-900);
   font-weight: 700;
+  cursor: pointer;
 }
 .mortgage-type {
   margin-right: 1.5rem;
+}
+.mortgage-type:active {
+  color: #e7e982;
 }
 .radio-container {
   width: 100%;
   padding: 1rem 2rem;
 }
+.radio-container:focus-within {
+  background: #e7e982;
+}
 .results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 3.5rem;
   background: var(--Slate-900);
   border-top-right-radius: 15px;
@@ -154,8 +189,8 @@ input {
 .results-container--1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .results-description {
   text-align: center;
@@ -176,6 +211,10 @@ button {
   font-family: inherit;
   font-size: 1.6rem;
   margin-top: 3rem;
+  cursor: pointer;
+}
+button:hover {
+  background: #e7e982;
 }
 .body-text--2 {
   color: var(--Slate-300);
@@ -186,6 +225,7 @@ button {
   border-radius: 4px;
   background: #0b1c26;
   padding: 2rem;
+  width: 100%;
 }
 .monthly-repayment {
   margin-bottom: 1rem;

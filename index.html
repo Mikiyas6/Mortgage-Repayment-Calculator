@@ -9,12 +9,13 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./src/assets/images/favicon-32x32.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/Css/style.css">
+    <link rel="stylesheet" href="./src/Css/queries.css">
     <script type="module" defer src="./src/Js/controller.js"></script>
     <title>Mortgage repayment calculator</title>
   </head>
@@ -23,16 +24,17 @@
       <div class="form-container">
         <div class="form-header">
           <h2 class="title form-title">Mortgage Calculator</h2>
-          <a class="body-text" href="#">Clear All</a>
+          <a class="body-text clear" href="#">Clear All</a>
         </div>
-        <form action="" id="mortage-form">
+        <form action="submit" class="mortgage-form">
           <label class="label" for="mortgage-term">Mortgage Amount</label>
          <div class="input-container input-container--1">
           <span class="tag">&#163;</span>
           <input
           type="number"
           id="mortgage-amount"
-          name="mortgage-amount"
+          name="mortgageAmount"
+          step="0.01"
           required
         />
          </div>
@@ -43,7 +45,7 @@
                 <input
                   type="number"
                   id="mortgage-term"
-                  name="mortgage-term"
+                  name="mortgageTerm"
                   required
                 />
                 <span class="tag">years</span>
@@ -55,7 +57,8 @@
                 <input
                   type="number"
                   id="interest-rate"
-                  name="interest-rate"
+                  name="interestRate"
+                  step="0.01"
                   required
                 />
                 <span class="tag">%</span>
@@ -65,17 +68,17 @@
           <label class="label" for="mortgage-type">Mortgage Type</label> <br>
           <div class="input-container radio-container">
             <label class="label mortgage-type-label" for="repayment">
-              <input type="radio" id="repayment" name="repayment" class="mortgage-type type--repayment" value="repayment" required > Repayment
+              <input type="radio" id="repayment" name="radio" class="mortgage-type type--repayment" value="repayment" required > Repayment
                     </label><br>
           </div>
-        <div class="input-container radio-container">
+        <div class="input-container radio-container" for="interest" >
           <label class="label mortgage-type-label" for="interest">
-            <input type="radio" id="interest" name="interest" class="mortgage-type type--interest" value="interest-only" required> Interest Only
+            <input type="radio" id="interest" name="radio" class="mortgage-type type--interest" value="interestOnly" required> Interest Only
                 </label><br>
         </div>
-      <button><img src="./src/assets/images/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
+      <button class="btn"><img src="./src/assets/images/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
       </div>
-      <div class="results-container results-container--1">
+      <div class="results-container">
         <img src="./src/assets/images/illustration-empty.svg" alt="calculator illustration">
         <h2 class="title results-title">Results shown here</h2>
         <p class="body-text results-description">Complete the form and click “calculate repayments” to see
