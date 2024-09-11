@@ -31,7 +31,7 @@ class CalculatorView {
     });
   }
   _generateMarkup() {
-    return ` <img src="${illustration}illustration-empty.svg" alt="calculator illustration">
+    return ` <img src="${illustration}" alt="calculator illustration">
         <h2 class="title results-title">Results shown here</h2>
         <p class="body-text results-description">Complete the form and click “calculate repayments” to see
           what your monthly repayments would be.</p>
